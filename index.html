@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="assets/font/stylesheet.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="header-logo">
+        <a href="#"><img src="assets/images/icons/logo.svg" alt="logo" /></a>
+      </div>
+      <img src="assets/images/icons/menu.svg" class="menu-icon" width="40px" />
+      <nav class="header-menu">
+        <a href="#about">О нас</a>
+        <a href="#advice">Советуем</a>
+        <a href="admin.html" style="color: #f50e30">Admin</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header-social">
+        <a href="#"><img src="assets/images/icons/telegram.svg" alt="tg" /></a>
+        <a href="#"><img src="assets/images/icons/whatsapp.svg" alt="wp" /></a>
+        <a href="#"><img src="assets/images/icons/youtube.svg" alt="yb" /></a>
+      </div>
+    </header>
+    
+    <div class="overlay"></div>
+    
+    <script>
+      const burgerMenu = document.querySelector('.menu-icon');
+      const overlay = document.querySelector('.overlay');
+      const menu = document.querySelector('.header-menu');
+    
+      burgerMenu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+    
+      overlay.addEventListener('click', () => {
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    </script>
+    
+
+    <section class="banner container">
+      <div class="banner-text">
+        <h1>Купите автомобиль дешевле на 60%*</h1>
+        <p>
+          Привезем автомобиль под ключ со всеми документами. <br />
+          Подбор автомобиля под любой запрос БЕСПЛАТНО
+        </p>
+        <a href="dealer.html">
+          <button class="btn-first">Оставить заявку</button>
+        </a>
+      </div>
+      <div class="banner-image">
+        <img src="assets/images/bg-main.png" alt="bg" />
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <div class="about-text">
+        <h2>
+          Поможем вам выгодно купить и привезти автомобиль в любую точку России
+        </h2>
+        <p>
+          Предлагаем Вам купить автомобиль дешевле и лучше, но за тот же бюджет
+        </p>
+        <a href="dealer.html">
+          <button class="btn-first">Оставить заявку</button>
+        </a>
+      </div>
+      <div class="about-cards container">
+        <div class="about-card">
+          <h3>С пробегом</h3>
+          <p>
+            Предлагаем купить автомобиль дешевле до 60%, от рыночной цены на
+            Авито и Авто.ру
+          </p>
+          <img src="assets/images/about/lock.png" class="card-first" alt="" />
+        </div>
+        <div class="about-card">
+          <h3>Новые</h3>
+          <p>
+            Предлагаем купить автомобиль дешевле до 60%, от рыночной цены на
+            Авито и Авто.ру
+          </p>
+          <img src="assets/images/about/car.png" class="card-second" alt="" />
+        </div>
+        <div class="about-card">
+          <h3>Под ваш бюджет</h3>
+          <p>
+            Предлагаем купить автомобиль дешевле до 60%, от рыночной цены на
+            Авито и Авто.ру
+          </p>
+          <img src="assets/images/about/money.png" class="card-third" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="advice container">
+      <div class="advice-text">
+        <h2>
+          Мы советуем подбирать автомобиль с бюджетом от
+          <span style="color: #f50e30">1,3 млн</span>
+        </h2>
+        <p>с учетом расходов на доставку, растаможку и наши услуги.</p>
+        <a href="dealer.html">
+          <button class="btn-first">Оставить заявку</button>
+        </a>
+      </div>
+      <div class="advice-image">
+        <img src="assets/images/advice.png" alt="" />
+      </div>
+    </section>
+
+    <section class="dealer container">
+      <div class="dealer-text">
+        <h2>Какие авто привозим?</h2>
+        <p>Привозим авто не старше 7 лет на момент растаможки.</p>
+      </div>
+
+      <div class="dealer-cards">
+        <div class="slider-container">
+          <div class="dealer-card">
+            <img src="assets/images/dealer/white.png" alt="" />
+            <h3>Toyota RAV4 2022</h3>
+            <div class="d-card-set">
+              <p>Пробег</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>5 700 км</span>
+            </div>
+            <div class="d-card-set">
+              <p>Объем двигателя</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>2.0</span>
+            </div>
+            <div class="d-card-set">
+              <p>Мощность</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>149 л.с.</span>
+            </div>
+            <div class="d-card-set">
+              <p>Коробка</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>Автомат</span>
+            </div>
+            <a href="dealer.html">
+              <button class="btn-second">Оставить заявку</button>
+            </a>
+          </div>
+
+          <div class="dealer-card">
+            <img src="assets/images/dealer/blue.png" alt="" />
+            <h3>Audi Q5 2021</h3>
+            <div class="d-card-set">
+              <p>Пробег</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>5 700 км</span>
+            </div>
+            <div class="d-card-set">
+              <p>Объем двигателя</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>2.0</span>
+            </div>
+            <div class="d-card-set">
+              <p>Мощность</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>149 л.с.</span>
+            </div>
+            <div class="d-card-set">
+              <p>Коробка</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>Автомат</span>
+            </div>
+            <a href="dealer.html">
+              <button class="btn-second">Оставить заявку</button>
+            </a>
+          </div>
+
+          <div class="dealer-card">
+            <img src="assets/images/dealer/black.png" alt="" />
+            <h3>Honda CR-V 2021</h3>
+            <div class="d-card-set">
+              <p>Пробег</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>5 700 км</span>
+            </div>
+            <div class="d-card-set">
+              <p>Объем двигателя</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>2.0</span>
+            </div>
+            <div class="d-card-set">
+              <p>Мощность</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>149 л.с.</span>
+            </div>
+            <div class="d-card-set">
+              <p>Коробка</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>Автомат</span>
+            </div>
+            <a href="dealer.html">
+              <button class="btn-second">Оставить заявку</button>
+            </a>
+          </div>
+          <div class="dealer-card">
+            <img src="assets/images/dealer/white.png" alt="" />
+            <h3>Toyota RAV4 2022</h3>
+            <div class="d-card-set">
+              <p>Пробег</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>5 700 км</span>
+            </div>
+            <div class="d-card-set">
+              <p>Объем двигателя</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>2.0</span>
+            </div>
+            <div class="d-card-set">
+              <p>Мощность</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>149 л.с.</span>
+            </div>
+            <div class="d-card-set">
+              <p>Коробка</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>Автомат</span>
+            </div>
+            <a href="dealer.html">
+              <button class="btn-second">Оставить заявку</button>
+            </a>
+          </div>
+
+          <div class="dealer-card">
+            <img src="assets/images/dealer/blue.png" alt="" />
+            <h3>Audi Q5 2021</h3>
+            <div class="d-card-set">
+              <p>Пробег</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>5 700 км</span>
+            </div>
+            <div class="d-card-set">
+              <p>Объем двигателя</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>2.0</span>
+            </div>
+            <div class="d-card-set">
+              <p>Мощность</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>149 л.с.</span>
+            </div>
+            <div class="d-card-set">
+              <p>Коробка</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>Автомат</span>
+            </div>
+            <a href="dealer.html">
+              <button class="btn-second">Оставить заявку</button>
+            </a>
+          </div>
+
+          <div class="dealer-card">
+            <img src="assets/images/dealer/black.png" alt="" />
+            <h3>Honda CR-V 2021</h3>
+            <div class="d-card-set">
+              <p>Пробег</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>5 700 км</span>
+            </div>
+            <div class="d-card-set">
+              <p>Объем двигателя</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>2.0</span>
+            </div>
+            <div class="d-card-set">
+              <p>Мощность</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>149 л.с.</span>
+            </div>
+            <div class="d-card-set">
+              <p>Коробка</p>
+              <img src="assets/images/dealer/price.svg" alt="" />
+              <span>Автомат</span>
+            </div>
+            <a href="dealer.html">
+              <button class="btn-second">Оставить заявку</button>
+            </a>
+          </div>
+
+          <script>
+            const sliderContainer = document.querySelector(".slider-container");
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            sliderContainer.addEventListener("mousedown", (e) => {
+              isDown = true;
+              sliderContainer.classList.add("active");
+              startX = e.pageX - sliderContainer.offsetLeft;
+              scrollLeft = sliderContainer.scrollLeft;
+            });
+
+            sliderContainer.addEventListener("mouseleave", () => {
+              isDown = false;
+              sliderContainer.classList.remove("active");
+            });
+
+            sliderContainer.addEventListener("mouseup", () => {
+              isDown = false;
+              sliderContainer.classList.remove("active");
+            });
+
+            sliderContainer.addEventListener("mousemove", (e) => {
+              if (!isDown) return;
+              e.preventDefault();
+              const x = e.pageX - sliderContainer.offsetLeft;
+              const walk = (x - startX) * 1;
+              sliderContainer.scrollLeft = scrollLeft - walk;
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <h2>Наши контакты</h2>
+      <div class="footer-cards">
+        <div class="footer-card">
+          <span>Адрес</span>
+          <a href="#">428000, г. Чебоксары, Марпосадское шоссе, 14.</a>
+        </div>
+        <div class="footer-card">
+          <span>Время работы</span>
+          <a href="#">Ежедневно 10:00 до 19:00</a>
+        </div>
+        <div class="footer-card">
+          <span>Телефон</span>
+          <a href="#"
+            >8 927 997 12 42 <br />
+            8 927 997 12 42
+          </a>
+        </div>
+        <div class="footer-card">
+          <span>E-mail</span>
+          <a href="#">brute-car@mail.ru</a>
+        </div>
+      </div>
+      <img src="assets/images/map.png" alt="" />
+      <div class="footer-doc">
+        <a href="#">Реквизиты</a>
+        <a href="#">Политика конфиденциальности </a>
+      </div>
+    </footer>
+  </body>
+</html>

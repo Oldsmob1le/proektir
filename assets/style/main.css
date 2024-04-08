@@ -1,0 +1,603 @@
+* {
+    padding: 0;
+    margin: 0 5px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Intro';
+    font-weight: 400;
+}
+
+/* -------- Setings -------- */
+
+:root {
+    --red: #F50E30;
+    --bg-gray: #F4F6F8;
+    --section: 112px 20px;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+.btn-first {
+    width: 290px;
+    height: 60px;
+    border-radius: 8px;
+    background: rgb(245, 14, 48);
+    color: #fff;
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.btn-second {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background: rgb(245, 14, 48);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+/* ----- Header ----- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.header-menu {
+    display: flex;
+    gap: 2vw;
+}
+
+.header-menu a {
+    color: inherit;
+    font-size: 1.05em;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    display: none;
+}
+
+/* ----- Banner ----- */
+
+.banner {
+    padding: var(--section);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+
+.banner-text {
+    padding: 20px;
+}
+
+.banner-text h1 {
+    font-size: 3em;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1vw;
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2vw;
+}
+
+.banner-image {
+    padding: 20px;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ----- About ----- */
+
+.about {
+    padding: var(--section);
+    background: var(--bg-gray);
+    background-attachment: fixed;
+    border-radius: 20px;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2vw;
+    font-weight: 800;
+    line-height: 54px;
+}
+
+.about p {
+    margin: 22px 0 24px 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 5vh;
+    margin: 20px;
+}
+
+.about-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+    max-width: 350px;
+    height: 224px;
+    padding: 20px 50px 20px 50px;
+    position: relative;
+}
+
+.about-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+
+.about-card p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 320px;
+}
+
+.card-first {
+    position: absolute;
+    width: 94px;
+    height: 82px;
+    left: 310px;
+    top: 164px;
+}
+
+.card-second {
+    position: absolute;
+    width: 221.39px;
+    height: 120px;
+    left: 210px;
+    top: 140px;
+}
+
+.card-third {
+    position: absolute;
+    width: 222px;
+    height: 140px;
+    left: 210px;
+    top: 117px;
+}
+
+/* ----- Advice ----- */
+
+.advice {
+    padding: var(--section);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.advice-text h2 {
+    font-size: 2.9rem;
+    font-weight: 700;
+    line-height: 54px;
+    max-width: 560px;
+}
+
+.advice-text p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 20px 0 30px 0;
+    max-width: 440px;
+}
+
+.advice-image {
+    text-align: center;
+}
+
+.advice-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ----- Dealer -----*/
+
+.dealer {
+    padding: var(--section);
+    background: var(--bg-gray);
+    border-radius: 20px;
+}
+
+.dealer-text {
+    margin-bottom: 30px;
+}
+
+.dealer-text h2 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 54px;
+    margin-bottom: 20px;
+}
+
+.dealer-text p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* Dealer -> Card */
+
+.slider-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    cursor: grab;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.dealer-card {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: auto;
+    height: 100%;
+}
+
+.dealer-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 15px 0 30px 0;
+}
+
+.d-card-set {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+
+.d-card-set p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.d-card-set span {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+/* ----- Footer ----- */
+
+footer {
+    padding: var(--section);
+}
+
+.footer-cards {
+    margin: 70px 0;
+    display: flex;
+    gap: 5vw;
+}
+
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer h2 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.footer-card span {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 25px 0 20px 0;
+}
+
+.footer-card a {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    max-width: 300px;
+    color: inherit;
+}
+
+.footer-doc {
+    display: flex;
+    gap: 200px;
+    margin-top: 10px;
+}
+
+.footer-doc a {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration-line: underline;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* -------- Product -------- */
+
+.product {
+    padding: var(--section);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.product h3 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* -------- Media -------- */
+
+@media (max-width: 1600px) {
+
+    /* Button */
+    .btn-first {
+        width: 240px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .btn-second {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    /* Banner */
+    .banner-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* About */
+    .about h2 {
+        font-size: 3vw;
+    }
+
+
+}
+
+@media (max-width: 1200px) {
+
+    /* Button */
+    .btn-first {
+        width: 180px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    /* Banner */
+    .banner-text h1 {
+        font-size: 2.7em;
+    }
+
+    /* About */
+    .about h2 {
+        font-size: 4vw;
+    }
+
+    .about-cards {
+        flex-wrap: wrap;
+    }
+
+    /* Advice */
+    .advice-image img {
+        max-width: 80%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    /* About */
+    .about h2 {
+        font-size: 6vw;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Button */
+    .btn-first {
+        width: 180px;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    /* Header */
+
+    .header-menu {
+        gap: 1.5vw;
+    }
+
+    .header-menu a {
+        font-size: 0.9em;
+    }
+
+    /* Banner */
+
+    .banner-image img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .banner-text h1 {
+        font-size: 6vw;
+    }
+
+    .map img {
+        width: 50%;
+        height: auto;
+    }
+
+    /* Advice */
+    .advice-image img {
+        max-width: 60%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    /* Header */
+
+    header {
+        padding: 40px;
+        position: relative;
+    }
+
+    .header-social {
+        display: none;
+    }
+
+    .header-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 200px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .header-menu a {
+        font-size: 2em;
+        margin-bottom: 50px;
+    }
+
+    .header-menu.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Banner */
+
+    .banner {
+        padding: 1px
+    }
+
+    .banner-text h1 {
+        font-size: 8vw;
+    }
+
+    .banner-image img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .banner {
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* About */
+    .about h2 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-items: center;
+    }
+
+    /* Advice */
+    .advice-image img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    .advice {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .advice-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    /* Dealer */
+
+    .slider-container {
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+        cursor: grab;
+    }
+    
+    .menu-open {
+        display: block;
+    }
+}
