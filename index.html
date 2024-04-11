@@ -10,39 +10,36 @@
   <body>
     <header class="container">
       <div class="header-logo">
-        <a href="#"><img src="assets/images/icons/logo.svg" alt="logo" /></a>
+          <a href="#"><img src="assets/images/icons/logo.svg" alt="logo" /></a>
       </div>
       <img src="assets/images/icons/menu.svg" class="menu-icon" width="40px" />
-      <nav class="header-menu">
-        <a href="#about">О нас</a>
-        <a href="#advice">Советуем</a>
-        <a href="admin.html" style="color: #f50e30">Admin</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-      <div class="header-social">
-        <a href="#"><img src="assets/images/icons/telegram.svg" alt="tg" /></a>
-        <a href="#"><img src="assets/images/icons/whatsapp.svg" alt="wp" /></a>
-        <a href="#"><img src="assets/images/icons/youtube.svg" alt="yb" /></a>
+      <div id="burger-menu" class="burger-menu header-menu">
+          <div>
+              <p class="burger-title">Меню</p>
+              <nav class="burger-menu-nav header-menu-nav">
+                  <a href="#about">О нас</a>
+                  <a href="#advice">Советуем</a>
+                  <a href="admin.html" style="color: #f50e30">Admin</a>
+                  <a href="#contact">Контакты</a>
+              </nav>
+          </div>
       </div>
-    </header>
-    
-    <div class="overlay"></div>
-    
-    <script>
-      const burgerMenu = document.querySelector('.menu-icon');
-      const overlay = document.querySelector('.overlay');
-      const menu = document.querySelector('.header-menu');
-    
-      burgerMenu.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        overlay.classList.toggle('active');
+      <div class="header-social">
+          <a href="#"><img src="assets/images/icons/telegram.svg" alt="tg" /></a>
+          <a href="#"><img src="assets/images/icons/whatsapp.svg" alt="wp" /></a>
+          <a href="#"><img src="assets/images/icons/youtube.svg" alt="yb" /></a>
+      </div>
+  </header>
+  
+  <script>
+      const burgerIcon = document.querySelector('.menu-icon');
+      const burgerMenu = document.getElementById('burger-menu');
+  
+      burgerIcon.addEventListener('click', () => {
+          burgerMenu.classList.toggle('active');
+          document.querySelector('.overlay').classList.toggle('active');
       });
-    
-      overlay.addEventListener('click', () => {
-        menu.classList.remove('active');
-        overlay.classList.remove('active');
-      });
-    </script>
+  </script>
     
 
     <section class="banner container">

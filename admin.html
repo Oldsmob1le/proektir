@@ -6,54 +6,264 @@
     <link rel="stylesheet" href="assets/style/main.css" />
     <link rel="stylesheet" href="assets/style/admin.css" />
     <link rel="stylesheet" href="assets/font/stylesheet.css" />
-    <title>Document</title>
+    <title>Admin</title>
   </head>
   <body>
     <div class="adaptive">
       <div class="slider">
+        <div class="slider-ico">
+          <img src="assets/images/icons/menu.svg" alt="" />
+        </div>
         <h2>Brute Car</h2>
         <div class="slider-menu">
-            <div class="slider-menu_option">
-                <img src="assets/images/icons/que.svg" alt="">
-                <p>Заявки</p>
-            </div>
-            <div class="slider-menu_option red-option">
-                <img src="assets/images/icons/dashboard.svg" alt="">
-                <p>Автомобили</p>
-            </div>
-            <div class="slider-menu_option">
-                <img src="assets/images/icons/people.svg" alt="">
-                <p>Поддержка</p>
-            </div>
+          <div class="slider-menu_option">
+            <img src="assets/images/icons/que.svg" alt="" />
+            <p>Заявки</p>
+          </div>
+          <div class="slider-menu_option red-option">
+            <img src="assets/images/icons/dashboard.svg" alt="" />
+            <p>Автомобили</p>
+          </div>
+          <div class="slider-menu_option">
+            <img src="assets/images/icons/people.svg" alt="" />
+            <p>Поддержка</p>
+          </div>
         </div>
         <div class="slider-info">
-            <h3>BRUTE CAR</h3>
-            <p>Версия: 1.00</p>
+          <h3>BRUTE CAR</h3>
+          <p>Версия: 1.00</p>
         </div>
       </div>
       <div class="main">
         <div class="main-header">
           <div class="main-header__search">
             <div class="search">
-              <p>ПОИСК</p>
+              <input type="text" placeholder="ПОИСК" />
             </div>
           </div>
           <div class="main-header__button">
-            <button class="btn-admin">Добавить</button>
+            <button class="btn-admin" id="openAddModalBtn" class="btn-red">
+              Добавить
+            </button>
+          </div>
+
+          <div id="addModal" class="modal">
+            <div class="modal-content">
+              <h2>Добавить машину</h2>
+              <form id="addCarForm">
+                <label for="addCarBrand">Марка машины:</label>
+                <input
+                  type="text"
+                  id="addCarBrand"
+                  name="addCarBrand"
+                  required
+                /><br /><br />
+
+                <label for="addCarSpecs">Характеристики:</label>
+                <input
+                  type="text"
+                  id="addCarSpecs"
+                  name="addCarSpecs"
+                  required
+                /><br /><br />
+
+                <label for="addInitialPrice">Первоначальная цена:</label>
+                <input
+                  type="number"
+                  id="addInitialPrice"
+                  name="addInitialPrice"
+                  required
+                /><br /><br />
+
+                <label for="addFinalPrice">Окончательная цена:</label>
+                <input
+                  type="number"
+                  id="addFinalPrice"
+                  name="addFinalPrice"
+                  required
+                /><br /><br />
+
+                <button type="submit" class="btn-red">Добавить</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="authModal" class="modal">
+            <div class="modal-content">
+              <div id="registrationSection">
+                <h2>Регистрация</h2>
+                <form id="registrationForm">
+                  <input
+                    type="text"
+                    id="usernameReg"
+                    name="usernameReg"
+                    placeholder="Введите имя"
+                    required
+                  /><br /><br />
+
+                  <input
+                    type="password"
+                    id="passwordReg"
+                    name="passwordReg"
+                    placeholder="Введите пароль"
+                    required
+                  /><br /><br />
+
+                  <button type="submit" class="btn-red">
+                    Зарегистрироваться
+                  </button>
+                </form>
+                <p>Уже есть аккаунт? <a href="#" id="toggleLogin">Войти</a></p>
+              </div>
+
+              <div id="loginSection" style="display: none">
+                <h2>Вход</h2>
+                <form id="loginForm">
+                  <input
+                    type="text"
+                    id="usernameLogin"
+                    name="usernameLogin"
+                    placeholder="Введите имя"
+                    required
+                  /><br /><br />
+
+                  <input
+                    type="password"
+                    id="passwordLogin"
+                    name="passwordLogin"
+                    placeholder="Введите пароль"
+                    required
+                  /><br /><br />
+
+                  <button type="submit" class="btn-red">Войти</button>
+                </form>
+                <p>
+                  Нет аккаунта?
+                  <a href="#" id="toggleRegistration">Зарегистрироваться</a>
+                </p>
+              </div>
+            </div>
           </div>
           <div class="main-header__user">
-            <img src="assets/images/avatar.png" alt="">
+            <a href="#" id="openAuthModalBtn">
+              <img
+                src="assets/images/avatar.png"
+                alt=""
+                style="cursor: pointer"
+              />
+            </a>
           </div>
         </div>
+
+        <script>
+          var authModal = document.getElementById("authModal");
+          var openAuthModalBtn = document.getElementById("openAuthModalBtn");
+          var toggleLoginLink = document.getElementById("toggleLogin");
+          var toggleRegistrationLink =
+            document.getElementById("toggleRegistration");
+
+          openAuthModalBtn.onclick = function () {
+            authModal.style.display = "block";
+            registrationSection.style.display = "block";
+            loginSection.style.display = "none";
+          };
+
+          toggleLoginLink.onclick = function () {
+            registrationSection.style.display = "none";
+            loginSection.style.display = "block";
+          };
+
+          toggleRegistrationLink.onclick = function () {
+            registrationSection.style.display = "block";
+            loginSection.style.display = "none";
+          };
+
+          window.onclick = function (event) {
+            if (event.target == authModal) {
+              authModal.style.display = "none";
+            }
+          };
+        </script>
+
         <div class="admin">
           <div class="admin-header">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="name" />
             <p>Марка</p>
             <p>Характеристики</p>
             <p>Первая цена</p>
             <p>Окончательная цена</p>
           </div>
         </div>
+        <div class="admin-container"></div>
+        <div id="editModal" class="modal">
+          <div class="modal-content">
+            <h2>Редактировать машину</h2>
+            <form id="editCarForm">
+              <label for="editCarBrand">Марка машины:</label>
+              <input
+                type="text"
+                id="editCarBrand"
+                name="editCarBrand"
+                required
+              /><br /><br />
+
+              <label for="editCarSpecs">Характеристики:</label>
+              <input
+                type="text"
+                id="editCarSpecs"
+                name="editCarSpecs"
+                required
+              /><br /><br />
+
+              <label for="editInitialPrice">Первоначальная цена:</label>
+              <input
+                type="number"
+                id="editInitialPrice"
+                name="editInitialPrice"
+                required
+              /><br /><br />
+
+              <label for="editFinalPrice">Окончательная цена:</label>
+              <input
+                type="number"
+                id="editFinalPrice"
+                name="editFinalPrice"
+                required
+              /><br /><br />
+
+              <button type="submit" class="btn-red">Сохранить</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="admin-container__button">
+          <button class="btn-admin" id="openEditModalBtn">Редактировать</button>
+        </div>
+
+        <script>
+          var addModal = document.getElementById("addModal");
+          var openAddModalBtn = document.getElementById("openAddModalBtn");
+
+          openAddModalBtn.onclick = function () {
+            addModal.style.display = "block";
+          };
+
+          var openEditModalBtn = document.getElementById("openEditModalBtn");
+          var editModal = document.getElementById("editModal");
+
+          openEditModalBtn.onclick = function () {
+            editModal.style.display = "block";
+          };
+
+          window.onclick = function (event) {
+            if (event.target == addModal) {
+              addModal.style.display = "none";
+            }
+            if (event.target == editModal) {
+              editModal.style.display = "none";
+            }
+          };
+        </script>
       </div>
     </div>
   </body>
